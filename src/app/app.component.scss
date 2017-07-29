@@ -1,0 +1,61 @@
+$sidebarWidth: 120px;
+$futureBlue: #02E2FF;
+$lightBlue: #ABD3ED;
+$blueBlack: #01010A;
+
+.sidebar {
+  height: 100%;
+  min-width: $sidebarWidth;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background: $blueBlack;
+  border-right: 2px solid $futureBlue;
+  color: $futureBlue;
+  z-index: 1;
+}
+.sidebar-element {
+  margin-top: 26px;
+  text-align: center;
+}
+.sidebar button {
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  width: 80px;
+  padding: 4px;
+  line-height: normal;
+  border: 2px solid $lightBlue;
+  // box-shadow: 0 0 1px 1px $lightBlue,
+  //             0 0 1px 1px $lightBlue inset;
+}
+.sidebar button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 2px $futureBlue,
+              0 0 5px 2px $futureBlue inset;
+}
+
+
+.main-content {
+  margin-left: $sidebarWidth;
+  width: calc(100% - #{$sidebarWidth});
+  height: 100vh;
+  background-color: $blueBlack;
+  color: $futureBlue;
+}
+
+:host {
+  /deep/ router-outlet ~ * {
+    position: fixed;
+    width: calc(100% - #{$sidebarWidth});
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 50px;
+  }
+}
+
+md-icon {
+  height: auto;
+  width: auto;
+}

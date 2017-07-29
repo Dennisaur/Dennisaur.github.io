@@ -1,0 +1,17 @@
+<div class="content">
+  My projects!
+  
+  <div [@slideLeftAnimation]="projects?.length">
+    <a *ngFor="let project of projects"
+      class="project"
+      href="{{project.link}}"
+      target="_blank">
+      <img class="column image" src="{{project.image}}" />
+      <div class="column project-details">
+        {{project.name}}<br />
+        {{project.description}}
+      </div>
+    </a>
+  </div>
+
+</div>

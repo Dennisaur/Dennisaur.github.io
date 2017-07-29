@@ -1,0 +1,30 @@
+
+$futureBlue: #3A86B7;
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+.project {
+  box-sizing: content-box;
+  display: block;
+  border: 1px solid $futureBlue;
+  overflow: auto;
+  max-width: 800px;
+  height: 200px;
+  margin: 10px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+.image {
+  height: 200px;
+  width: auto;
+}
