@@ -10,18 +10,20 @@ import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
+import { ProjectComponent } from './project/project.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+import { ResumeComponent } from './resume/resume.component';
+
+import { SharedService } from './services/shared.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    ProjectComponent,
     PortfolioComponent,
     AboutComponent,
-    ContactComponent
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +32,10 @@ import { ContactComponent } from './contact/contact.component';
     MdGridListModule,
     FlexLayoutModule,
     MdIconModule,
-    BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [MdIconRegistry],
+  providers: [MdIconRegistry, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

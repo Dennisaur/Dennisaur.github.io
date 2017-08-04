@@ -7,12 +7,12 @@ $contentPadding: 50px;
 * {
   box-sizing: border-box;
   font-family: sans-serif;
-  background-color: $blueBlack;
   color: $lightBlue;
 }
 
 body {
   margin: 0px;
+  background-color: $blueBlack;
 }
 .vertical-align-helper {
   display: inline-block;

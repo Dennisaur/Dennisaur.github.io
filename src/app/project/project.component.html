@@ -1,0 +1,13 @@
+
+<div class="content">
+  <img class="column" src="{{project.image}}" />
+  <div class="column project-details">
+    {{project.name}}<br />
+    {{project.description}}<br />
+    <br />
+    Technologies used:
+    <div *ngFor="let technology of project.technologies">
+      {{technology}}
+    </div>
+  </div>
+</div>

@@ -5,21 +5,33 @@
       "description": "Bubble tea finder mobile application",
       "image": "./assets/images/BobaNow.png",
       "link": "https://play.google.com/store/apps/details?id=com.DennisaurCo.BobaNow",
-      "technologies": ["Ionic", "TypeScript", "HTML", "CSS"]
+      "technologies": ["Ionic", "TypeScript", "HTML", "CSS"],
+      "column": 5,
+      "columnSpan": 4,
+      "row": 1,
+      "rowSpan": 6
     },
     {
       "name": "Blockle Sprint",
       "description": "Tetris Sprint clone",
       "image": "./assets/images/BlockleSprint.png",
       "link": "https://google.com",
-      "technologies": ["Unity", "C#"]
+      "technologies": ["Unity", "C#"],
+      "column": 9,
+      "columnSpan": 4,
+      "row": 1,
+      "rowSpan": 12
     },
     {
       "name": "Prismatic Showdown",
       "description": "Split screen multiplayer coloring arena",
       "image": "./assets/images/PrismaticShowdown.png",
       "link": "http://prismaticshowdown.weebly.com/",
-      "technologies": ["Unity", "C#"]
+      "technologies": ["Unity", "C#"],
+      "column": 3,
+      "columnSpan": 6,
+      "row": 7,
+      "rowSpan": 6
     }
   ]
 }

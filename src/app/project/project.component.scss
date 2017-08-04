@@ -1,5 +1,6 @@
-$futureBlue: #3A86B7;
-
+$futureBlue: #02E2FF;
+$lightBlue: #ABD3ED;
+$blueBlack: #01010A;
 
 .content {
   height: 100%;
@@ -8,13 +9,13 @@ $futureBlue: #3A86B7;
 }
 
 .column {
-  float: left;
   padding: 10px;
+  float: left;
 }
 
 img {
   max-height: 100%;
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   width: auto;
 }
