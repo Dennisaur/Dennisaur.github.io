@@ -1,17 +1,22 @@
 <div class="content">
-  My projects!
-  
-  <div [@slideLeftAnimation]="projects?.length">
-    <a *ngFor="let project of projects"
-      class="project"
-      href="{{project.link}}"
-      target="_blank">
-      <img class="column image" src="{{project.image}}" />
-      <div class="column project-details">
-        {{project.name}}<br />
-        {{project.description}}
-      </div>
-    </a>
-  </div>
+  <div class="grid-box" [@helixAnimation]="projects?.length">
+    <div *ngFor='let project of projects; let i = index;'
+          class="grid-item"
+          [style.grid-row-start]="project.row"
+          [style.grid-row-end]="project.row + project.rowSpan"
+          [style.grid-column-start]="project.column"
+          [style.grid-column-end]="project.column + project.columnSpan"
+          (click)="onSelect(project)">
 
+      <span class="vertical-align-helper"></span>
+      <img src="{{project.image}}" />
+    </div>
+  </div>
 </div>
+
+<main class="modal" (click)="close()" [@fadeInAnimation]="modalState" [class.resume-content]="activePanel=='resume'">
+  <button class="closeButton" (click)="close()">X</button>
+  <div class="routerContent">
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+</main>

@@ -1,38 +1,5 @@
-<div class="content">
-  <span class="vertical-align-helper"></span>
-  <div class="grid-wrapper">
-    <div class="grid-box">
+<app-navbar></app-navbar>
 
-      <span class="grid-item about"
-        (click)="setActivePanel('about', null, '/about')">
-        <span class="vertical-align-helper"></span>
-        <img class="image" src="./assets/images/ProfilePlaceholder.png" />
-      </span>
-
-      <span class="grid-item resume"
-        (click)="setActivePanel('resume', null, '/resume')">
-        <span class="vertical-align-helper"></span>
-        <img class="image" src="./assets/images/Resume.png" />
-      </span>
-
-      <div *ngFor='let project of projects; let i = index;'
-        class="grid-item"
-        [style.grid-row-start]="project.row"
-        [style.grid-row-end]="project.row + project.rowSpan"
-        [style.grid-column-start]="project.column"
-        [style.grid-column-end]="project.column + project.columnSpan"
-        (click)="setActivePanel('project-' + i, project, '/project')">
-        <span class="vertical-align-helper"></span>
-        <img class="image" src="{{project.image}}" />
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<main class="modal" (click)="close()" [@fadeInAnimation]="modalState" [class.resume-content]="activePanel=='resume'">
-  <button class="closeButton" (click)="close()">X</button>
-  <div class="routerContent">
+<div class="fluid-container fill-height">
     <router-outlet></router-outlet>
-  </div>
-</main>
+</div>

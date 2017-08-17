@@ -1,23 +1,36 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
 /* You can add global styles to this file, and also import other style files */
 $futureBlue: #3A86B7;
 $lightBlue: #ABD3ED;
 $blueBlack: #01010A;
 $contentPadding: 50px;
+$navbarHeight: 80px;
 
 * {
   box-sizing: border-box;
   font-family: sans-serif;
-  color: $lightBlue;
 }
 
-body {
-  margin: 0px;
-  background-color: $blueBlack;
+html {
+  height: 100%;
 }
+body {
+  height: 100%;
+  padding-top: $navbarHeight;
+  // background-color: $blueBlack;
+}
+
 .vertical-align-helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+// Fix navbar-right margin
+.navbar-right {
+  margin-right: 0px;
 }
 
 /* Rules for sizing the icon. */

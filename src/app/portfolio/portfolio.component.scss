@@ -1,30 +1,81 @@
+@import '../../styles.scss';
 
-$futureBlue: #3A86B7;
 
 .content {
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  margin: auto;
+}
+
+img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  vertical-align: middle;
+}
+
+
+.grid-box {
+  display: grid;
+  width: 100%;
+  height: calc(100% - #{$navbarHeight});
+  grid-template-columns: repeat(12, calc(100% / 12));
+  grid-template-rows: repeat(12, calc(calc(100vh - 100px) / 12));
+  text-align: center;
+  margin: auto;
+}
+
+.grid-item {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid $futureBlue;
+  vertical-align: middle;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.grid-item:hover {
+  box-shadow: 0 0 10px 3px $futureBlue,
+              0 0 10px 3px $futureBlue inset;
+}
+
+
+
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 200px;
+  min-width: 200px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 75px;
+}
+.modal.resume-content {
+  padding: 20px 75px 20px 20px;
+}
+
+.routerContent {
   width: 100%;
   height: 100%;
 }
-
-a, a:visited, a:hover, a:active {
-  color: inherit;
+.resume-content .routerContent {
+  padding: 0px;
 }
 
-.project {
-  box-sizing: content-box;
-  display: block;
-  border: 1px solid $futureBlue;
-  overflow: auto;
-  max-width: 800px;
-  height: 200px;
-  margin: 10px;
-}
-
-.column {
-  float: left;
-  padding: 10px;
-}
-.image {
-  height: 200px;
-  width: auto;
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  background-color: Transparent;
+  font-size: 35px;
+  color: white;
+  border: none;
+  padding: 20px;
 }

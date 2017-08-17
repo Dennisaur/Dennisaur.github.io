@@ -1,49 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router }  from '@angular/router';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { fadeInAnimation, slideInOutAnimation, slideLeftAnimation } from '../_animations/index';
+
+import { fadeInAnimation, helixAnimation } from '../_animations/index';
+
+import { PortfolioService } from './portfolio.service';
+import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
-  animations: [slideLeftAnimation],
-  host: {'[@slideLeftAnimation]':'' }
+  animations: [fadeInAnimation, helixAnimation]
 })
 export class PortfolioComponent implements OnInit {
   projects: any = [];
-  storedProjects: any = [];
-  state: string = "inactive";
+  modalState: string = "inactive";
 
-  constructor(private http: Http) {
-    this.state = "inactive";
-    this.getProjects().subscribe((data) => {
-        setTimeout(() => this.projects = data.projects);
-        this.storedProjects = data.projects;
-        //setTimeout(() => this.state = "active");
-        // for (let project of this.projects) {
-        //   project.state = "inactive";
-        // }
-        // this.setProjectsActive('active', 200, false);
+  constructor(private http: Http,
+              private router: Router,
+              private portfolioService: PortfolioService) {
 
-        //setTimeout(() => this.setProjectsActive('inactive', 200, true), 5000);
-      });
-  }
-
-  toggleState() {
-    this.projects.length ? this.projects = [] : this.projects = this.storedProjects;
+    portfolioService.getProjects().subscribe((data) => {
+      this.projects = data.projects;
+    });
   }
 
   ngOnInit() {
 
   }
 
-
-  ngOnDestroy() {
+  onSelect(project: any) {
+    this.router.navigate(['/project', project.id], { skipLocationChange: true });
+    this.modalState = "active";
   }
 
-  getProjects() {
-    return this.http.get('./assets/data/projects.json').map((res) => res.json());
+  close() {
+    this.modalState = "inactive";
+    this.router.navigate(['']);
   }
+
 }
