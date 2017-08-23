@@ -1,30 +1,40 @@
 @import '../../styles.scss';
 
-
-.content {
-  height: 100%;
+.component-container {
   width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
+  height: 100%;
   padding: 50px;
   background-color: rgb(22, 22, 22);
   color: lightGray;
+  overflow: auto;
 }
 
-//TODO Responsive column formatting
-.column {
-  float: left;
-  padding: 10px;
-  width: 33%;
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
   font-size: 1.5rem;
+  margin: auto;
 }
+@media screen and (max-width: 950px) {
+  .content {
+    max-width: 550px;
+    grid-template-columns: auto;
+  }
+}
+@media screen and (min-width: 951px) {
+  .content {
+    grid-template-columns: auto auto auto;
+  }
+}
+
 .contact-title {
   font-size: 3rem;
 }
 
 // Auto-resize image to parent element
 img {
-  max-height: 100%;
   max-width: 100%;
   height: auto;
   width: auto;

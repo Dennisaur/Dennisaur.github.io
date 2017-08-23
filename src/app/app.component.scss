@@ -2,14 +2,13 @@
 
 :host {
   /deep/ .fluid-container > router-outlet ~ * {
-    position: fixed;
+    // position: fixed;
     width: 100%;
-    height: calc(100vh - #{$navbarHeight});
+    height: calc(100% - #{$navbarHeight});
   }
 }
 
 .fill-height {
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
+  height: 100% !important;
 }
