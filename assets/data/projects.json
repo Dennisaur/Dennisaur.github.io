@@ -1,37 +1,43 @@
 {
   "projects": [
     {
-      "name": "Boba Now!",
-      "description": "Bubble tea finder mobile application",
+      "id": 0,
+      "title": "Boba Now!",
+      "description": "Boba Now! is a hybrid mobile application that lets you quickly and easily find nearby bubble tea location.",
+      "details": "This hybrid mobile application was developed using the Ionic framework with HTML, CSS, and TypeScript. The Yelp Fusion and Google Maps APIs were used to retrieve and display bubble tea locations.",
       "image": "./assets/images/BobaNow.png",
-      "link": "https://play.google.com/store/apps/details?id=com.DennisaurCo.BobaNow",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.DennisaurCo.BobaNow",
       "technologies": ["Ionic", "TypeScript", "HTML", "CSS"],
-      "column": 5,
+      "column": 1,
       "columnSpan": 4,
       "row": 1,
-      "rowSpan": 6
+      "rowSpan": 5
     },
     {
-      "name": "Blockle Sprint",
-      "description": "Tetris Sprint clone",
+      "id": 1,
+      "title": "Blockle Sprint",
+      "description": "Blockle Sprint is a simple Tetris clone where you race against time to clear 40 lines as fast as possible.",
+      "details": "",
       "image": "./assets/images/BlockleSprint.png",
-      "link": "https://google.com",
+      "website": "https://google.com",
       "technologies": ["Unity", "C#"],
-      "column": 9,
+      "column": 1,
       "columnSpan": 4,
+      "row": 6,
+      "rowSpan": 7
+    },
+    {
+      "id": 2,
+      "title": "Prismatic Showdown",
+      "description": "Prismatic Showdown is a split-screen multiplayer game in which 2-4 players compete to transform a blank playing field into a mess of colors.",
+      "details": "",
+      "image": "./assets/images/PrismaticShowdown.png",
+      "website": "http://prismaticshowdown.weebly.com/",
+      "technologies": ["Unity", "C#"],
+      "column": 5,
+      "columnSpan": 8,
       "row": 1,
       "rowSpan": 12
-    },
-    {
-      "name": "Prismatic Showdown",
-      "description": "Split screen multiplayer coloring arena",
-      "image": "./assets/images/PrismaticShowdown.png",
-      "link": "http://prismaticshowdown.weebly.com/",
-      "technologies": ["Unity", "C#"],
-      "column": 3,
-      "columnSpan": 6,
-      "row": 7,
-      "rowSpan": 6
     }
   ]
 }
