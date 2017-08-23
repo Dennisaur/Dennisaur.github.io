@@ -1,6 +1,6 @@
 <div class="content">
   <div class="grid-box" [@helixAnimation]="projects?.length">
-    <div *ngFor='let project of projects; let i = index;'
+    <div *ngFor='let project of projects'
           class="grid-item"
           [style.grid-row-start]="project.row"
           [style.grid-row-end]="project.row + project.rowSpan"
@@ -10,13 +10,22 @@
 
       <span class="vertical-align-helper"></span>
       <img src="{{project.image}}" />
+
+      <div class="grid-item-hover">
+        <span class="vertical-align-helper"></span>
+        <span class="project-title">
+          {{project.title}}
+        </span>
+      </div>
     </div>
   </div>
 </div>
 
-<main class="modal" (click)="close()" [@fadeInAnimation]="modalState" [class.resume-content]="activePanel=='resume'">
+<div class="project-modal" (click)="close()" [@fadeInAnimation]="modalState" >
   <button class="closeButton" (click)="close()">X</button>
-  <div class="routerContent">
-    <!-- <router-outlet></router-outlet> -->
+  <span class="vertical-align-helper"></span>
+  <div class="routerContent" (click)="$event.stopPropagation()">
+    <router-outlet></router-outlet>
+    <router-outlet name="popup"></router-outlet>
   </div>
-</main>
+</div>

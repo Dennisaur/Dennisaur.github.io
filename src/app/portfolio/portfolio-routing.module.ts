@@ -3,14 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProjectComponent } from './project/project.component';
 import { PortfolioComponent } from './portfolio.component';
+import { AboutComponent } from '../about/about.component';
 
 const portfolioRoutes: Routes = [
-  { path: 'portfolio', component: PortfolioComponent },
-    // children: [
-    //   { path: '/', component: PortfolioComponent, index: true },
-    //   { path: '/:id', component: ProjectComponent }
-    // ]
-  { path: 'project/:id', component: ProjectComponent }
+  { path: 'portfolio', component: PortfolioComponent,
+
+    children: [
+      { path: 'project/:id', component: ProjectComponent, outlet: 'popup' }
+    ]
+  }
 ]
 
 @NgModule({

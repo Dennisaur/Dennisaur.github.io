@@ -1,27 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class SharedService {
   private projects: any;
   private activeProject: any;
 
-  constructor() {
+  private notify = new Subject<any>();
+  notifyObservable$ = this.notify.asObservable();
 
-  }
+  constructor() {}
 
-  setProjects(projects: any) {
-    this.projects = projects;
-  }
-
-  getProjects() {
-    return this.projects;
-  }
-
-  setActiveProject(project: any) {
-    this.activeProject = project;
-  }
-
-  getActiveProject() {
-    return this.activeProject;
+  public closeModal() {
+    this.notify.next();
   }
 }

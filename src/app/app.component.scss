@@ -1,15 +1,10 @@
 @import '../styles.scss';
 
-$sidebarWidth: 120px;
-$futureBlue: #02E2FF;
-$lightBlue: #ABD3ED;
-$blueBlack: #01010A;
-
 :host {
-  /deep/ router-outlet ~ * {
+  /deep/ .fluid-container > router-outlet ~ * {
     position: fixed;
     width: 100%;
-    height: calc(100% - #{$navbarHeight});
+    height: calc(100vh - #{$navbarHeight});
   }
 }
 
@@ -18,14 +13,3 @@ $blueBlack: #01010A;
   height: auto !important;
   height: 100%;
 }
-//
-// .section-component {
-//   height: calc(100vh);
-//   padding-top: $navbarHeight;
-// }
-// .section-component::before {
-//   content: "";
-//   display: block;
-//   height: $navbarHeight;
-//   margin-top: calc(-1 * #{$navbarHeight});
-// }

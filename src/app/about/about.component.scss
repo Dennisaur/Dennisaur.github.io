@@ -1,20 +1,44 @@
-$futureBlue: #3A86B7;
+@import '../../styles.scss';
 
 
 .content {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  box-sizing: border-box;
+  padding: 50px;
+  background-color: rgb(22, 22, 22);
+  color: lightGray;
 }
 
+//TODO Responsive column formatting
 .column {
   float: left;
   padding: 10px;
+  width: 33%;
+  font-size: 1.5rem;
+}
+.contact-title {
+  font-size: 3rem;
 }
 
+// Auto-resize image to parent element
 img {
   max-height: 100%;
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   width: auto;
+}
+
+// Set nav-link anchors to display: block
+.nav-link {
+  display: block;
+  padding: 4px;
+}
+.nav-link i {
+  vertical-align: middle;
+}
+textarea {
+  max-width: 100%;
+  min-width: 100%;
 }

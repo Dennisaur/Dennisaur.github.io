@@ -4,6 +4,8 @@ import 'rxjs/add/operator/switchMap';
 
 import { PortfolioService } from '../portfolio.service';
 
+import { fadeInAnimation, helixAnimation } from '../../_animations/index';
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',

@@ -1,13 +1,31 @@
 
-<div class="content">
-  <img class="column" src="{{project.image}}" />
+<div class="project-content">
+  <div class="column image">
+    <img src="{{project.image}}" />
+  </div>
   <div class="column project-details">
-    {{project.name}}<br />
-    {{project.description}}<br />
+    <span id="project-title">{{project.title}}</span>
     <br />
+    {{project.description}}
+    <br /><br />
     Technologies used:
     <div *ngFor="let technology of project.technologies">
       {{technology}}
     </div>
+
+    <br /><br />
+
+    <div [hidden]="project.googlePlay == null">
+      <a href="{{project.googlePlay}}" class="anchor-button" target="_blank">
+        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' />
+      </a>
+    </div>
+
+    <div [hidden]="project.website == null">
+      <a href="{{project.website}}" class="anchor-button" target="_blank">
+        <button class="btn btn-default">Visit Website</button>
+      </a>
+    </div>
+
   </div>
 </div>
