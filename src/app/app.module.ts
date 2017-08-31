@@ -10,7 +10,7 @@ import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 
 import { SharedService } from './services/shared.service';
@@ -21,7 +21,7 @@ import { PortfolioModule } from './portfolio/portfolio.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
+    ContactComponent,
     ResumeComponent,
     NavbarComponent
   ],

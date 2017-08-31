@@ -7,24 +7,27 @@
       "details": "This hybrid mobile application was developed using the Ionic framework with HTML, CSS, and TypeScript. The Yelp Fusion and Google Maps APIs were used to retrieve and display bubble tea locations.",
       "image": "./assets/images/BobaNow.png",
       "googlePlay": "https://play.google.com/store/apps/details?id=com.DennisaurCo.BobaNow",
-      "technologies": ["Ionic", "TypeScript", "HTML", "CSS"],
+      "github": "https://github.com/Dennisaur/BobaNow",
+      "technologies": ["Ionic", "TypeScript", "HTML/CSS"],
       "column": 1,
       "columnSpan": 4,
       "row": 1,
-      "rowSpan": 5
+      "rowSpan": 6
     },
     {
       "id": 1,
       "title": "Blockle Sprint",
       "description": "Blockle Sprint is a simple Tetris clone where you race against time to clear 40 lines as fast as possible.",
       "details": "",
-      "image": "./assets/images/BlockleSprint.png",
-      "website": "https://google.com",
-      "technologies": ["Unity", "C#"],
+      "image": "./assets/images/BlockleSprintWindows.png",
+      "downloadExe": "./assets/data/Blockle Sprint.zip",
+      "downloadApk": "./assets/data/Blockle Sprint.apk",
+      "github": "https://github.com/Dennisaur/Blockle-Sprint",
+      "technologies": ["Unity3D", "C#"],
       "column": 1,
       "columnSpan": 4,
-      "row": 6,
-      "rowSpan": 7
+      "row": 7,
+      "rowSpan": 6
     },
     {
       "id": 2,
@@ -33,7 +36,7 @@
       "details": "",
       "image": "./assets/images/PrismaticShowdown.png",
       "website": "http://prismaticshowdown.weebly.com/",
-      "technologies": ["Unity", "C#"],
+      "technologies": ["Unity3D", "C#"],
       "column": 5,
       "columnSpan": 8,
       "row": 1,

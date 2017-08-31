@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { fadeInAnimation, slideInOutAnimation, slideLeftAnimation, helixAnimation } from './_animations/index';
-
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 

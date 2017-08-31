@@ -1,9 +1,7 @@
 
 <div class="project-content">
-  <div class="column image">
-    <img src="{{project.image}}" />
-  </div>
-  <div class="column project-details">
+  <img src="{{project.image}}" />
+  <div class="project-details">
     <span id="project-title">{{project.title}}</span>
     <br />
     {{project.description}}
@@ -13,19 +11,42 @@
       {{technology}}
     </div>
 
-    <br /><br />
+    <div class="project-links">
+      <span [hidden]="project.googlePlay == null" >
+        <a href="{{project.googlePlay}}" target="_blank" class="link-button" >
+          <img alt='Get it on Google Play' src="./assets/images/google-play-badge.png" />
+        </a>
+      </span>
 
-    <div [hidden]="project.googlePlay == null">
-      <a href="{{project.googlePlay}}" class="anchor-button" target="_blank">
-        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' />
-      </a>
+      <span [hidden]="project.website == null">
+        <a href="{{project.website}}" target="_blank" class="link-button" >
+          <button class="btn btn-default">Visit Website</button>
+        </a>
+      </span>
+
+      <span [hidden]="project.downloadExe == null">
+        <a href="{{project.downloadExe}}" download class="link-button" >
+          <button class="btn btn-default">
+            <i class="fa fa-download fa-lg" aria-hidden="true"></i> Windows
+          </button>
+        </a>
+      </span>
+
+      <span [hidden]="project.downloadApk == null">
+        <a href="{{project.downloadExe}}" download class="link-button" >
+          <button class="btn btn-default">
+            <i class="fa fa-download fa-lg" aria-hidden="true"></i> Android
+          </button>
+        </a>
+      </span>
+
+      <span [hidden]="project.github == null" >
+        <a href="{{project.github}}" target="_blank" class="link-button"  >
+          <button class="btn btn-default">
+            <i class="fa fa-github fa-lg" aria-hidden="true"></i> Github
+          </button>
+        </a>
+      </span>
     </div>
-
-    <div [hidden]="project.website == null">
-      <a href="{{project.website}}" class="anchor-button" target="_blank">
-        <button class="btn btn-default">Visit Website</button>
-      </a>
-    </div>
-
   </div>
 </div>
