@@ -24,18 +24,10 @@
         </a>
       </span>
 
-      <span [hidden]="project.downloadExe == null">
-        <a href="{{project.downloadExe}}" download class="link-button" >
+      <span [hidden]="project.downloadLink == null">
+        <a href="{{project.downloadLink}}" target="_blank" class="link-button" >
           <button class="btn btn-default">
-            <i class="fa fa-download fa-lg" aria-hidden="true"></i> Windows
-          </button>
-        </a>
-      </span>
-
-      <span [hidden]="project.downloadApk == null">
-        <a href="{{project.downloadExe}}" download class="link-button" >
-          <button class="btn btn-default">
-            <i class="fa fa-download fa-lg" aria-hidden="true"></i> Android
+            <i class="fa fa-download fa-lg" aria-hidden="true"></i> Download
           </button>
         </a>
       </span>
