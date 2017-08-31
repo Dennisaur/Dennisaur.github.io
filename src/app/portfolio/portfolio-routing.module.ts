@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProjectComponent } from './project/project.component';
 import { PortfolioComponent } from './portfolio.component';
-import { AboutComponent } from '../about/about.component';
 
 const portfolioRoutes: Routes = [
   { path: 'portfolio', component: PortfolioComponent,
