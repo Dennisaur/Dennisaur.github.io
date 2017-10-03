@@ -3,13 +3,13 @@
     {
       "id": 0,
       "title": "Boba Now!",
-      "description": "Boba Now! is a hybrid mobile application that lets you quickly and easily find nearby bubble tea location.",
+      "description": "Boba Now! is a mobile application that lets you quickly and easily find nearby bubble tea locations.",
       "details": "This hybrid mobile application was developed using the Ionic framework with HTML, CSS, and TypeScript. The Yelp Fusion and Google Maps APIs were used to retrieve and display bubble tea locations.",
       "image": "./assets/images/BobaNow.png",
       "googlePlay": "https://play.google.com/store/apps/details?id=com.DennisaurCo.BobaNow",
       "github": "https://github.com/Dennisaur/BobaNow",
       "technologies": ["Ionic", "TypeScript", "HTML/CSS"],
-      "column": 1,
+      "column": 2,
       "columnSpan": 4,
       "row": 1,
       "rowSpan": 6
@@ -23,10 +23,10 @@
       "downloadLink": "https://github.com/Dennisaur/Blockle-Sprint/releases",
       "github": "https://github.com/Dennisaur/Blockle-Sprint",
       "technologies": ["Unity3D", "C#"],
-      "column": 1,
-      "columnSpan": 4,
-      "row": 7,
-      "rowSpan": 6
+      "column": 6,
+      "columnSpan": 6,
+      "row": 8,
+      "rowSpan": 5
     },
     {
       "id": 2,
@@ -36,10 +36,24 @@
       "image": "./assets/images/PrismaticShowdown.png",
       "website": "http://prismaticshowdown.weebly.com/",
       "technologies": ["Unity3D", "C#"],
-      "column": 5,
-      "columnSpan": 8,
+      "column": 6,
+      "columnSpan": 6,
       "row": 1,
-      "rowSpan": 12
+      "rowSpan": 7
+    },
+    {
+      "id": 3,
+      "title": "Boop",
+      "description": "Boop is a simple mobile game where you draw various gestures to poke animals on the nose.",
+      "details": "",
+      "image": "./assets/images/Boop.png",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.DennisaurCo.Boop",
+      "github": "https://github.com/Dennisaur/Doodle",
+      "technologies": ["Unity3D", "C#"],
+      "column": 2,
+      "columnSpan": 4,
+      "row": 7,
+      "rowSpan": 6
     }
   ]
 }
